@@ -13,12 +13,17 @@ let yourPassword = []
 // console.log(Math.floor(Math.random() * 11));
 
 function passwordGen(passwordLength) {
+    // Function runs based on the number provided by the user.
     for (let i = 0; i < passwordLength; i++) {
         let rL = Math.floor(Math.random() * characterList.lettersList.length);
+            // randomly chooses a number between 1 and lettersList length.
         yourPassword.push(characterList.lettersList[rL]);
+            // Finds which letter corresponds to the above random number and pushes it to an empty array.
     }
 }
 
 passwordGen(10)
 
-console.log(yourPassword);
+let stringTest = yourPassword.join("");
+    // This combines each of the password results into one string with no seperators.
+console.log(stringTest);
