@@ -8,8 +8,6 @@ let characterList = [
     digitsList = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
     specialList = [" ", "!", "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "^", "_", "`", "{", "|", "}", "~"],
 ]
-let stringPassword = yourPassword.join("");
-    // This combines each of the password results into one string with no seperators.
 
 function passwordGen(passwordLength) {
     // Function runs based on the password length number provided by the user.
@@ -27,16 +25,17 @@ function passwordGen(passwordLength) {
 function writePassword() {
     let passwordText = document.querySelector("#password");
     // Write password to the #password input
+    let stringPassword = yourPassword.join("");
+    // This combines each of the password results into one string with no seperators.
     passwordText.value = stringPassword;
     // Sets visible text to the end result; a password string.
 } 
 
-// function promptTime() {
-//     var passNum = prompt("Yo. How many characters do you want in your password?");
-//     console.log(passNum)
-//     passwordGen(12);
-//     writePassword();
-// }
+function promptTime() {
+    var passNum = parseInt(prompt("Yo. How many characters do you want in your password?"));
+    passwordGen(passNum);
+    writePassword();
+}
 
 generateBtn.addEventListener("click", promptTime);
     // Add event listener to generate button 
