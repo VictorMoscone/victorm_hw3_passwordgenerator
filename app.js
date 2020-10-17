@@ -7,14 +7,9 @@ let characterList = [
     lettersList = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y","z"],
     digitsList = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
     specialList = [" ", "!", "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "^", "_", "`", "{", "|", "}", "~"],
-]   
-
-function writePassword() {
-    let passwordText = document.querySelector("#password");
-    // Write password to the #password input
-    passwordText.value = stringPassword;
-    // Sets visible text to the end result; a password string.
-} 
+]
+let stringPassword = yourPassword.join("");
+    // This combines each of the password results into one string with no seperators.
 
 function passwordGen(passwordLength) {
     // Function runs based on the password length number provided by the user.
@@ -29,7 +24,21 @@ function passwordGen(passwordLength) {
     }
 }
 
-generateBtn.addEventListener("click", writePassword, passwordGen(10));
+function writePassword() {
+    let passwordText = document.querySelector("#password");
+    // Write password to the #password input
+    passwordText.value = stringPassword;
+    // Sets visible text to the end result; a password string.
+} 
+
+// function promptTime() {
+//     var passNum = prompt("Yo. How many characters do you want in your password?");
+//     console.log(passNum)
+//     passwordGen(12);
+//     writePassword();
+// }
+
+generateBtn.addEventListener("click", promptTime);
     // Add event listener to generate button 
 
 // // Additional notes to self for homework requirements:
@@ -39,7 +48,3 @@ generateBtn.addEventListener("click", writePassword, passwordGen(10));
 //     - To include numerics?
 //     - To include specials?
 //     - I'm thinking that instead of a series of prompts, I want to just have checkboxes? If possible.
-
-let stringPassword = yourPassword.join("");
-    // This combines each of the password results into one string with no seperators.
-console.log(stringPassword);
