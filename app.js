@@ -1,14 +1,13 @@
 let generateBtn = document.querySelector("#generate");
     // Assignment Code
-
+let yourPassword = []
+    // Assigning yourPassword an empty array.
 let characterList = [
+    // An array with nested arrays that can easily be called on.
     lettersList = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y","z"],
     digitsList = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
     specialList = [" ", "!", "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "^", "_", "`", "{", "|", "}", "~"],
 ]   
-
-let yourPassword = []
-    // Assigning yourPassword an empty array.
 
 function writePassword() {
     let passwordText = document.querySelector("#password");
