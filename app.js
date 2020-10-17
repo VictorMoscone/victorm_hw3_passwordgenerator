@@ -1,25 +1,21 @@
 let generateBtn = document.querySelector("#generate");
     // Assignment Code
 
-function writePassword() {
-    // Write password to the #password input
-    let password = stringPassword;
-    let passwordText = document.querySelector("#password");
-    passwordText.value = password;
-}
-
-generateBtn.addEventListener("click", writePassword);
-    // Add event listener to generate button
+let characterList = [
+    lettersList = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y","z"],
+    digitsList = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+    specialList = [" ", "!", "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "^", "_", "`", "{", "|", "}", "~"],
+]   
 
 let yourPassword = []
     // Assigning yourPassword an empty array.
 
-
-let characterList = [
-        lettersList = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y","z"],
-        digitsList = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
-        specialList = [" ", "!", "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "^", "_", "`", "{", "|", "}", "~"],
-    ]     
+function writePassword() {
+    let passwordText = document.querySelector("#password");
+    // Write password to the #password input
+    passwordText.value = stringPassword;
+    // Sets visible text to the end result; a password string.
+} 
 
 function passwordGen(passwordLength) {
     // Function runs based on the password length number provided by the user.
@@ -34,6 +30,9 @@ function passwordGen(passwordLength) {
     }
 }
 
+generateBtn.addEventListener("click", writePassword, passwordGen(10));
+    // Add event listener to generate button 
+
 // // Additional notes to self for homework requirements:
 //     - User chooses length.
 //     - To include lowercase?
@@ -41,8 +40,6 @@ function passwordGen(passwordLength) {
 //     - To include numerics?
 //     - To include specials?
 //     - I'm thinking that instead of a series of prompts, I want to just have checkboxes? If possible.
-
-passwordGen(10)
 
 let stringPassword = yourPassword.join("");
     // This combines each of the password results into one string with no seperators.
