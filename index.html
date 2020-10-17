@@ -1,44 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style.css">
-    <link rel="stylesheet" 
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
-    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" 
-    crossorigin="anonymous">
-    <title>Super Passwords</title>
-</head>
-<body>
-    
-<div class="jumbotron">
-    <p class="text-center">Super Passwords</p>
-</div>
-
-  <section class="container">
-    <!-- The card that displays my about me lives here. -->
-    <div class="row">
-      <div class="mx-auto">
-        <div class="card mt-5 p-3">
-          <div class="card-body">
-            <h5 class="card-title">Generate a password</h5>
-                <p>Under construction.</p>
-          </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+      <div class="card">
+        <div class="card-header">
+          <h2>Generate a Password</h2>
+        </div>
+        <div class="card-body">
+          <textarea
+            readonly
+            id="password"
+            placeholder="Your Secure Password"
+            aria-label="Generated Password"
+          ></textarea>
+        </div>
+        <div class="card-footer">
+          <button id="generate" class="btn">Generate Password</button>
         </div>
       </div>
     </div>
-  </section>
-
-  <footer class="fixed-bottom bg-dark text-white">
-    <!-- This is your classic footer! -->
-    <p class="text-center mt-2">Copyright &copy; Victor Moscone</p>
-  </footer>
-
-  <script src="./app.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    
-</body>
+    <script src="./app.js"></script>
+  </body>
 </html>
