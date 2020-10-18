@@ -22,21 +22,27 @@ function promptTime() {
         let lwrCaseOk = confirm("Yo, want lowercase letters?");
             // This will either keep or remove all lowercase letters from the array.
             if (lwrCaseOk == false) {
-                let indexNum = characterList.indexOf(lowerCaseList)
+                let indexNum = characterList.indexOf(lowerCaseList);
                 characterList.splice(indexNum, 1);
             }
         let uprCaseOk = confirm("How about some uppercase letters?");
             // This will either keep or remove all uppercase letters from the array.
             if (uprCaseOk == false) {
-                let indexNum = characterList.indexOf(upperCaseList)
+                let indexNum = characterList.indexOf(upperCaseList);
                 characterList.splice(indexNum, 1);
             }
         let numOk = confirm("Can we roll some numbers for ya?");
             // This will either keep or remove all digits from the array.
             if (numOk == false) {
-                let indexNum = characterList.indexOf(digitsList)
+                let indexNum = characterList.indexOf(digitsList);
                 characterList.splice(indexNum, 1);
-        // var specOk = confirm("Lastly, are special characters okay?")
+            }
+        let specOk = confirm("Lastly, are special characters okay?")
+            // This will either keep or remove all special characters from the array.
+            if (specOk == false) {
+                let indexNum = characterList.indexOf(specialList);
+                characterList.splice(indexNum, 1); 
+            }             
         passwordGen(passNum);
         printPassword();
     }
@@ -62,12 +68,4 @@ function printPassword() {
     // This combines each of the password results into one string with no seperators.
     passwordText.value = stringPassword;
     // Sets visible text to the end result; a password string.
-} 
-
-// // Additional notes to self for homework requirements:
-//     - User chooses length. [Done]
-//     - To include lowercase? [Done]
-//     - To include uppercase?
-//     - To include numerics?
-//     - To include specials?
-//     - I'm thinking that instead of a series of prompts, I want to just have checkboxes? If possible.
+}
