@@ -10,7 +10,7 @@ There are *SO* man ways I could improve this code.
 1. Instead of prompts, the user has checkboxes they can toggle.
 2. The user can choose how many passwords they want to generate at once.
 3. The characterList array starts empty, and new arrays are added to it, instead of removed. This actually would have helped a lot.
-4. Using Arrays had a lot of benefits, but also had some complications when generating multiple times each page load.
+4. Using Arrays had a lot of benefits, but also had some complications when generating multiple times each page load. I had to use .slice() to duplicate the original array. No big deal on this project, but for a larger scale website - duplicating arrays would slow down the page. Once again, if I had started the array empty and added to it, this would have been a much easier problem to solve.
 
 ## Setup Instruction
 
@@ -27,13 +27,9 @@ Alternatively:
 * Primary Usage: To generate customized passwords with various character criterias.
 * Seen below -
 
-![portfolio_mobile_1](https://user-images.githubusercontent.com/70674522/95666363-9fe50980-0b0d-11eb-95d0-156be0bf04e1.PNG)
-![portfolio_mobile_2](https://user-images.githubusercontent.com/70674522/95666364-a07da000-0b0d-11eb-893b-038076eb8489.PNG)
-![portfolio_mobile_3](https://user-images.githubusercontent.com/70674522/95666365-a1163680-0b0d-11eb-8838-9ce8c48e6e08.PNG)
-![portfolio_web_1](https://user-images.githubusercontent.com/70674522/95666366-a1163680-0b0d-11eb-8c2b-3c5ffb6109cc.PNG)
-![portfolio_web_2](https://user-images.githubusercontent.com/70674522/95666368-a1163680-0b0d-11eb-83bc-979a947ea130.PNG)
-![portfolio_web_3](https://user-images.githubusercontent.com/70674522/95666369-a1aecd00-0b0d-11eb-8809-25ba4ae33977.PNG)
-
+![password_mobile_1](https://user-images.githubusercontent.com/70674522/96357676-deea0080-10b3-11eb-9405-3d206d2b6c24.PNG)
+![password_web_1](https://user-images.githubusercontent.com/70674522/96357677-df829700-10b3-11eb-8129-a2da2d8f55f5.PNG)
+![password_web_2](https://user-images.githubusercontent.com/70674522/96357695-10fb6280-10b4-11eb-8f23-bdf50fdddf30.PNG)
 
 **Credits** 
 
