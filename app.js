@@ -19,7 +19,7 @@ function promptTime() {
     if (isNaN(passNum) || passNum < 8 || passNum > 128) {
         alert("Not a valid number. Try again.");
     } else {
-        let lwrCaseOk = confirm("Yo, want lowercase letters?");
+        let lwrCaseOk = confirm("Want to buy some lowercase letters?");
             // This will either keep or remove all lowercase letters from the array.
             disableList(lwrCaseOk, lowerCaseList);
         let uprCaseOk = confirm("How about some uppercase letters?");
@@ -33,7 +33,7 @@ function promptTime() {
             disableList(specOk, specialList);
         if (characterList.length === 0) {
             // Stops the function if the user didn't choose any password elements.
-            alert("Bruh. You need to try this again.");
+            alert("You must choose at least 1 criteria. Try again.");
         } else {
             passwordGen(passNum);
             printPassword();
