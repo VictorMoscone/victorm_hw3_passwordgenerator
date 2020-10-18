@@ -6,7 +6,7 @@
 
 You want lowercase letters? We got 'em. Uppercase? You know it. Numbers and special characters? We're a little low on stock - but you can bet we have enough for you. Maybe you want only two of those four criteria? Well lucky for you, that's your choice! Think of each option as one of your four limbs, but unlike your limbs, they can be added or removed at will! We're practically Deadpool.
 
-There are *SO* man ways I could improve this code. 
+There are *SO* many ways I could improve this code. 
 1. Instead of prompts, the user has checkboxes they can toggle.
 2. The user can choose how many passwords they want to generate at once.
 3. The characterList array starts empty, and new arrays are added to it, instead of removed. This actually would have helped a lot.
