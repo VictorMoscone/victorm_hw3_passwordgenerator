@@ -31,7 +31,11 @@ function promptTime() {
                 let indexNum = characterList.indexOf(upperCaseList)
                 characterList.splice(indexNum, 1);
             }
-        // var numOk = confirm("Can we roll some numbers for ya?");
+        let numOk = confirm("Can we roll some numbers for ya?");
+            // This will either keep or remove all digits from the array.
+            if (numOk == false) {
+                let indexNum = characterList.indexOf(digitsList)
+                characterList.splice(indexNum, 1);
         // var specOk = confirm("Lastly, are special characters okay?")
         passwordGen(passNum);
         printPassword();
