@@ -21,30 +21,25 @@ function promptTime() {
     } else {
         let lwrCaseOk = confirm("Yo, want lowercase letters?");
             // This will either keep or remove all lowercase letters from the array.
-            if (lwrCaseOk == false) {
-                let indexNum = characterList.indexOf(lowerCaseList);
-                characterList.splice(indexNum, 1);
-            }
+            disableList(lwrCaseOk, lowerCaseList);
         let uprCaseOk = confirm("How about some uppercase letters?");
             // This will either keep or remove all uppercase letters from the array.
-            if (uprCaseOk == false) {
-                let indexNum = characterList.indexOf(upperCaseList);
-                characterList.splice(indexNum, 1);
-            }
+            disableList(uprCaseOk, upperCaseList);
         let numOk = confirm("Can we roll some numbers for ya?");
             // This will either keep or remove all digits from the array.
-            if (numOk == false) {
-                let indexNum = characterList.indexOf(digitsList);
-                characterList.splice(indexNum, 1);
-            }
+            disableList(numOk, digitsList);
         let specOk = confirm("Lastly, are special characters okay?")
             // This will either keep or remove all special characters from the array.
-            if (specOk == false) {
-                let indexNum = characterList.indexOf(specialList);
-                characterList.splice(indexNum, 1); 
-            }             
+            disableList(specOk, specialList);          
         passwordGen(passNum);
         printPassword();
+    }
+}
+
+function disableList(listType, listName) {
+    if (listType == false) {
+        let indexNum = characterList.indexOf(listName);
+        characterList.splice(indexNum, 1);
     }
 }
 
