@@ -30,13 +30,20 @@ function promptTime() {
             disableList(numOk, digitsList);
         let specOk = confirm("Lastly, are special characters okay?")
             // This will either keep or remove all special characters from the array.
-            disableList(specOk, specialList);          
-        passwordGen(passNum);
-        printPassword();
+            disableList(specOk, specialList);
+        if (characterList.length === 0) {
+            // Stops the function if the user didn't choose any password elements.
+            alert("Bruh. You need to try this again.");
+        } else {
+            passwordGen(passNum);
+            printPassword();
+        }          
+
     }
 }
 
 function disableList(listType, listName) {
+    // This will remove a property from our characterlist array if the user doesn't want it.
     if (listType == false) {
         let indexNum = characterList.indexOf(listName);
         characterList.splice(indexNum, 1);
