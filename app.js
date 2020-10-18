@@ -1,4 +1,5 @@
 let generateBtn = document.querySelector("#generate");
+let passContent = document.querySelector("#password");
     // Assignment Code
 let yourPassword = []
     // Assigning yourPassword an empty array.
@@ -8,6 +9,20 @@ let characterList = [
     digitsList = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
     specialList = [" ", "!", "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "^", "_", "`", "{", "|", "}", "~"],
 ]
+
+generateBtn.addEventListener("click", promptTime);
+    // Add event listener to generate button that starts the whole process.
+
+function promptTime() {
+    yourPassword = [];
+    let passNum = parseInt(prompt("Yo. Pick a number between 8 and 128."));
+    if (isNaN(passNum) || passNum < 8 || passNum > 128) {
+        alert("Not a valid number. Try again.");
+    } else {
+        passwordGen(passNum);
+        printPassword();
+    }
+}
 
 function passwordGen(passwordLength) {
     // Function runs based on the password length number provided by the user.
@@ -22,8 +37,8 @@ function passwordGen(passwordLength) {
     }
 }
 
-function writePassword() {
-    let passwordText = document.querySelector("#password");
+function printPassword() {
+    let passwordText = passContent;
     // Write password to the #password input
     let stringPassword = yourPassword.join("");
     // This combines each of the password results into one string with no seperators.
@@ -31,17 +46,8 @@ function writePassword() {
     // Sets visible text to the end result; a password string.
 } 
 
-function promptTime() {
-    var passNum = parseInt(prompt("Yo. How many characters do you want in your password?"));
-    passwordGen(passNum);
-    writePassword();
-}
-
-generateBtn.addEventListener("click", promptTime);
-    // Add event listener to generate button 
-
 // // Additional notes to self for homework requirements:
-//     - User chooses length.
+//     - User chooses length. [Done]
 //     - To include lowercase?
 //     - To include uppercase?
 //     - To include numerics?
