@@ -5,7 +5,7 @@ let yourPassword = []
     // Assigning yourPassword an empty array.
 let characterList = [
     // An array with nested arrays that can easily be called on.
-    lettersList = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y","z"],
+    lowerCaseList = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y","z"],
     upperCaseList = ["A", "B", "C", "D", "E", "F", "G", "H", "I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"],
     digitsList = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
     specialList = [" ", "!", "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "^", "_", "`", "{", "|", "}", "~"],
@@ -21,6 +21,7 @@ function promptTime() {
         alert("Not a valid number. Try again.");
     } else {
         let lwrCaseOk = confirm("Yo, want lowercase letters?");
+            // This will either keep or remove all lowercase letters from the array.
             if (lwrCaseOk == false) {
                 characterList.splice(0, 1);
             }
